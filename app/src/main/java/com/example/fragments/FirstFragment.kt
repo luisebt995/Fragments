@@ -1,15 +1,17 @@
 package com.example.fragments
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import kotlin.math.log
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+const val ARG_PARAM1 = "param1"
+const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
@@ -27,6 +29,7 @@ class FirstFragment : Fragment() {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
+        Log.i("FRAGMENTO", param1.orEmpty())
     }
 
     override fun onCreateView(
@@ -37,6 +40,7 @@ class FirstFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_first, container, false)
     }
 
+    /*
     companion object {
         /**
          * Use this factory method to create a new instance of
@@ -55,5 +59,5 @@ class FirstFragment : Fragment() {
                     putString(ARG_PARAM2, param2)
                 }
             }
-    }
+    }*/
 }
